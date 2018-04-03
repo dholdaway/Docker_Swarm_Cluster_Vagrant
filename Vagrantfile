@@ -26,7 +26,7 @@ Vagrant.configure(2) do |config|
     config.vm.define "worker-#{i}" do |worker|
       worker.vm.hostname = "worker-#{i}"
       worker.vm.box = "ubuntu/xenial64"
-      worker.vm.network "private_network", ip: "10.0.3.#{i+2}",  virtualbox__intnet: true, auto_config: true
+      worker.vm.network "private_network", ip: "10.0.3.#{i+2}"#,  virtualbox__intnet: true, auto_config: true
       worker.vm.provider :virtualbox do |v|
         v.cpus = 1
         v.memory = 512
