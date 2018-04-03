@@ -50,7 +50,8 @@ ansible.extra_vars = {
 
 To start a service, you would need to have the following:
 
-What is the Docker image that you want to run. we will run the standard nginx image that is officially available from the Docker hub.
+What is the Docker image that you want to run?
+we will run the standard nginx image that is officially available from the Docker hub.
 We will expose our service on port 80.
 We can specify the number of containers (or instances) to launch. This is specified via the replicas parameter.
 We will decide on the name for our service.
