@@ -1,18 +1,18 @@
 
 
-###Run
+### Run
 ```
 vagrant up
 ```
 
-###Connect
+### Connect
 When the cluster is running you can connect to the manager node at 10.0.3.2 and start deploying services!
 
 ```
 vagrant ssh manager
 ```
 
-###commands
+### commands
 ```
 docker service create nginx
 ```
@@ -36,8 +36,8 @@ docker service create --name my_web --replicas 3 --publish published=8080,target
 docker node inspect — pretty worker-1 or docker node inspect self
 ```
 
-
-###Note: because Ubuntu 16.04 ships with Python 3 instead of 2.x, we need to explicitly set the ansible_python_interpreter variable.
+### Notes
+Note: because Ubuntu 16.04 ships with Python 3 instead of 2.x, we need to explicitly set the ansible_python_interpreter variable.
 
 ```
 ansible.extra_vars = {
@@ -46,7 +46,7 @@ ansible.extra_vars = {
         }
 ```
 
-###Example
+### Example
 
 To start a service, you would need to have the following:
 
@@ -98,7 +98,7 @@ to remove the service
 docker service rm web
 ```
 
-###issues  
+### Issues  
 
 run
 ```
