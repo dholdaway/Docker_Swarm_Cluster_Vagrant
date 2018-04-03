@@ -1,0 +1,4 @@
+- name: add user to docker group
+  user: name=vagrant groups=docker append=yes
+  register: user_task
+  become: true

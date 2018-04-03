@@ -1,0 +1,36 @@
+#!/bin/bash
+apt-get install -y curl unzip
+
+mkdir -p /var/lib/consul
+mkdir -p /usr/share/consul
+mkdir -p /etc/consul/conf.d
+
+curl -OL https://releases.hashicorp.com/consul/0.7.5/consul_0.7.5_linux_amd64.zip
+unzip consul_0.7.5_linux_amd64.zip
+mv consul /usr/local/bin/consul
+
+# curl -OL https://releases.hashicorp.com/consul/0.7.5/consul_0.7.5_web_ui.zip
+# unzip consul_0.7.5_web_ui.zip -d dist
+# mv dist /usr/share/consul/ui
+
+
+# echo Updating linux
+# sudo apt-get update && sudo apt-get -y upgrade
+# echo Installing dependencies...
+# sudo apt-get install -y unzip curl
+# sudo apt-get -y autoremove
+# echo Fetching Consul...
+# cd /tmp/
+# wget https://dl.bintray.com/mitchellh/consul/0.5.2_linux_amd64.zip -O consul.zip
+# echo Installing Consul...
+# unzip consul.zip
+# sudo chmod +x consul
+# sudo mv consul /usr/bin/consul
+# echo Setup config folder...
+# sudo mkdir /etc/consul.d
+# sudo chmod a+w /etc/consul.d
+# echo Installing Consul Web UI
+# cd /tmp/
+# wget https://dl.bintray.com/mitchellh/consul/0.5.2_web_ui.zip -O web_ui.zip
+# unzip web_ui.zip
+# sudo mv dist /opt/
